@@ -2,7 +2,7 @@
 
 ## How to run the environment?
 
-git clone https://github.com/jportasa/python_web_mirror.git
+git clone this project
 
 from inside the repo path do:
 
