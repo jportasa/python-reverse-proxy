@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+
+  backend:
+    build:
+      context: .
+      dockerfile: config/docker-backend/Dockerfile
+    image: python-backend:latest
+    command: python app/echo-server.py
+
+  nginx-proxy:
+    build:
+      context: .
+      dockerfile: config/docker-nginx-proxy/Dockerfile
+    image: nginx-proxy:latest
+    ports:
+      - "80:80"
+    restart: always
+
+
+
